@@ -3,7 +3,7 @@ import os
 
 response = gid.googleimagesdownload()
 
-keywords = "chamelion"
+keywords = "chameleon"
 
 arguments = {"keywords": keywords, "limit": 10, "output_directory": "images"}
 

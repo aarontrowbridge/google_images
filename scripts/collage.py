@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 import os
 import math
 
-keyword = "chamelion"
+keyword = "chameleon"
 
 images = os.listdir("images/" + keyword)
 
@@ -16,11 +16,14 @@ collage = Image.new("RGBA", (n * pixelsperimage, n * pixelsperimage),
                     color=(255, 255, 255, 255))
 
 k = 0
-for i in range(0, n*pixelsperimage, pixelsperimage):
-    for j in range(0, n*pixelsperimage, pixelsperimage):
+for i in range(0, n * pixelsperimage, pixelsperimage):
+    for j in range(0, n * pixelsperimage, pixelsperimage):
+
         image = Image.open("images/" + keyword + "/" + images[k]).convert("RGBA")
         image = image.resize((pixelsperimage, pixelsperimage))
+
         collage.paste(image, (i,j))
+
         k += 1
 
 
