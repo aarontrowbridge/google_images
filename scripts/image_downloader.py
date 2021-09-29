@@ -1,11 +1,11 @@
 from google_images_download import google_images_download as gid
-import os
 
 response = gid.googleimagesdownload()
 
-keywords = "chameleon"
+keywords = "chameleon,snake"
+num_images = 10
 
-arguments = {"keywords": keywords, "limit": 10, "output_directory": "images"}
+arguments = {"keywords": keywords, "limit": num_images, "output_directory": "images"}
 
 response.download(arguments)
 
