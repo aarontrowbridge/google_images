@@ -28,7 +28,7 @@ for i in range(0, n * pixelsperimage, pixelsperimage):
         image = Image.open('images/' + images[k]).convert('RGBA')
         image = image.resize((pixelsperimage, pixelsperimage))
 
-        collage.paste(image, (i,j))
+        collage.paste(image, (i,j))                  
 
         k += 1
 
